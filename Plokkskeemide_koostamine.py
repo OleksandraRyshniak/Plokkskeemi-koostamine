@@ -7,24 +7,36 @@ for õ in range(20):
     for e in range(3):
         print(f"{e+1}. eksam")
 
-#V4 2. Koostage programmi plokkskeem, 
-#et arvutada ainult negatiivsete P antud arvude summa.
+# V4 2. Koostage programmi plokkskeem, 
+# et arvutada ainult negatiivsete P antud arvude summa.
+#1
 summ=0
-try: 
+try:
     P=int(input("Mitu korda kordame?"))
-    while True:
+except:
+    print("Vale formaat!")
+while True:
+    try:
+        arv=float(input("Sisesta arv: "))
+    except:
+        print("Vale formaat!")
+    if arv<0: summ += arv
+    P-=1 
+    if P==0:
+        break
+print(f"Summa: {summ}")
+#2
+summ=0
+try:
+    P=int(input("Mitu korda kordame?"))
+except:
+    print("Vale formaat!")
+for i in range(P):
+    try:
         arv=float(input("Sisesta arv: "))
         if arv<0: summ += arv
-        P-=1
-        if P==0:
-            break
-    print(f"Summa: {summ}")
-    
-summ=0
-P=int(input("Mitu korda kordame?"))
-for i in range(P):
-    arv=float(input("Sisesta arv: "))
-    if arv<0: summ += arv
+    except:
+        print("Vale formaat!")
 print(f"Summa: {summ}")
     
 
@@ -32,16 +44,25 @@ print(f"Summa: {summ}")
 
 #V3 1. Koostage programmi skeem, 
 #  mille abil arvutatakse ainult positiivsete arvude summa antud Q arvust.
-Q=int(input("Mitu korda kordame?"))
+try:
+    Q=int(input("Mitu korda kordame?"))
+except:
+    print("Vale formaat!")
 vastus=0
 for i in range(Q):
-    arv=float(input("Sisesta arv:"))
-    if arv>0: vastus+=arv
+    try:
+        arv=float(input("Sisesta arv:"))
+        if arv>0: vastus+=arv
+    except:
+        print("Vale formaat")
 print(f"Summa arved: {vastus}")
 
 #V1 4. Koostage plokkskeem kotlette praadiva roboti jaoks.
-kokku=int(input("Kokku kotlete: "))
-panni_maht=int(input("Panni maht: "))
+try:
+    kokku=int(input("Kokku kotlete: "))
+    panni_maht=int(input("Panni maht: "))
+except: 
+    print("Vale formaat!")
 aeg=1
 lahenemine=kokku//panni_maht
 jaak=kokku%panni_maht
@@ -60,3 +81,4 @@ for i in range(lahenemine):
     print(f"Valmis!")
 print("Kõik kotletid on praetud!")
 
+nj
