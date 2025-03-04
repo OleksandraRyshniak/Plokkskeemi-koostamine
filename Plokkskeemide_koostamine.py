@@ -81,4 +81,13 @@ for i in range(lahenemine):
     print(f"Valmis!")
 print("Kõik kotletid on praetud!")
 
-nj
+#V3
+#3. Arvutage ja väljastage naturaalse rea arvude summa,
+# mis algab arvuga N ja lõpeb arvuga M 
+# (arvud N ja M ei ole ette teada, need on kasutaja poolt antud).
+summ=0
+N=int(input("Sisesta arv: "))
+M=int(input("Sisesta arv: "))
+for i in range (N, M):
+    summ+=i
+print(f"Summa arved: {summ}")
