@@ -7,6 +7,7 @@ for õ in range(20):
     for e in range(3):
         print(f"{e+1}. eksam")
 
+
 # V4 2. Koostage programmi plokkskeem, 
 # et arvutada ainult negatiivsete P antud arvude summa.
 #1
@@ -38,24 +39,7 @@ for i in range(P):
     except:
         print("Vale formaat!")
 print(f"Summa: {summ}")
-    
 
-
-
-#V3 1. Koostage programmi skeem, 
-#  mille abil arvutatakse ainult positiivsete arvude summa antud Q arvust.
-try:
-    Q=int(input("Mitu korda kordame?"))
-except:
-    print("Vale formaat!")
-vastus=0
-for i in range(Q):
-    try:
-        arv=float(input("Sisesta arv:"))
-        if arv>0: vastus+=arv
-    except:
-        print("Vale formaat")
-print(f"Summa arved: {vastus}")
 
 #V1 4. Koostage plokkskeem kotlette praadiva roboti jaoks.
 try:
@@ -81,13 +65,35 @@ for i in range(lahenemine):
     print(f"Valmis!")
 print("Kõik kotletid on praetud!")
 
+#V3 1. Koostage programmi skeem, 
+#  mille abil arvutatakse ainult positiivsete arvude summa antud Q arvust.
+try:
+    Q=int(input("Mitu korda kordame?"))
+except:
+    print("Vale formaat!")
+vastus=0
+for i in range(Q):
+    try:
+        arv=float(input("Sisesta arv:"))
+        if arv>0: vastus+=arv
+    except:
+        print("Vale formaat")
+print(f"Summa arved: {vastus}")
+
+
 #V3
 #3. Arvutage ja väljastage naturaalse rea arvude summa,
 # mis algab arvuga N ja lõpeb arvuga M 
 # (arvud N ja M ei ole ette teada, need on kasutaja poolt antud).
 summ=0
-N=int(input("Sisesta arv: "))
-M=int(input("Sisesta arv: "))
+try:
+    N=int(input("Sisesta arv: "))
+except: 
+    print("Vale Formaat!")
+try:
+    M=int(input("Sisesta arv: "))
+except:
+    print("Vale foramaat!")
 for i in range (N, M):
     summ+=i
 print(f"Summa arved: {summ}")
